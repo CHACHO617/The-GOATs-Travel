@@ -16,6 +16,7 @@ public class CharacterController : MonoBehaviour
 
     public float moveSpeed = 5.0f;
     public GameObject ball;
+    public GameObject ball1;
     public Transform cannonTransform;
 
 
@@ -38,6 +39,10 @@ public class CharacterController : MonoBehaviour
         {
             FireBullet();
         }
+        else if (Input.GetKeyDown(KeyCode.J))
+        {
+            FireBulletL();
+        }
 
     }
 
@@ -47,13 +52,22 @@ public class CharacterController : MonoBehaviour
         if (ball != null && cannonTransform != null)
         {
             GameObject bullet = Instantiate(ball, cannonTransform.position, cannonTransform.rotation);
+            
+        }
+    }
+    void FireBulletL()
+    {
+        if (ball != null && cannonTransform != null)
+        {
+            GameObject bullet = Instantiate(ball1, cannonTransform.position, cannonTransform.rotation);
+
         }
     }
 
 
 
 
-        bool EstaEnSuelo()
+    bool EstaEnSuelo()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y), 0f, Vector2.down, 0.2f, capaSuelo);
         return raycastHit.collider != null;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallController : MonoBehaviour
+public class BallController1 : MonoBehaviour
 {
     public float speed = 10f;
     public float maxDistance = 100f;
@@ -16,13 +16,12 @@ public class BallController : MonoBehaviour
         initialPosition = transform.position;
     }
 
-
     // Update is called once per frame
     void Update()
     { 
-   
+    
 
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
 
 
         if (Vector3.Distance(initialPosition, transform.position) > maxDistance)
