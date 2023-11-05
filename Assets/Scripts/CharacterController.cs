@@ -14,6 +14,11 @@ public class CharacterController : MonoBehaviour
     private int saltosrestantes;
     private Animator animator;
 
+    public float moveSpeed = 5.0f;
+    public GameObject ball;
+    public Transform cannonTransform;
+
+
 
     private void Start()
     {
@@ -28,9 +33,27 @@ public class CharacterController : MonoBehaviour
     {
         ProcesarMovimiento();
         ProcesarSalto();
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            FireBullet();
+        }
+
     }
 
-    bool EstaEnSuelo()
+
+    void FireBullet()
+    {
+        if (ball != null && cannonTransform != null)
+        {
+            GameObject bullet = Instantiate(ball, cannonTransform.position, cannonTransform.rotation);
+        }
+    }
+
+
+
+
+        bool EstaEnSuelo()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y), 0f, Vector2.down, 0.2f, capaSuelo);
         return raycastHit.collider != null;
