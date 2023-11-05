@@ -12,12 +12,15 @@ public class CharacterController : MonoBehaviour
     public LayerMask capaSuelo;
     public int saltosMaximos;
     private int saltosrestantes;
+    private Animator animator;
+
 
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         saltosrestantes = saltosMaximos;
+        animator = GetComponent<Animator>();    
 
     }
     // Update is called once per frame
@@ -53,6 +56,20 @@ public class CharacterController : MonoBehaviour
     void ProcesarMovimiento()
     {
         float inputMovimiento = Input.GetAxis("Horizontal");
+        
+        if (inputMovimiento != 0f)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+
+        }
+
+
+
+
         rigidBody.velocity = new Vector2(inputMovimiento * velocidad, rigidBody.velocity.y);
         gestionarOrientacion(inputMovimiento);
     }
