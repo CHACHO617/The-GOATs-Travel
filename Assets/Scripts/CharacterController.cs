@@ -44,8 +44,37 @@ public class CharacterController : MonoBehaviour
             FireBulletL();
         }
 
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Cascaritas(); 
+            
+        }
+
+        
+              
+        
     }
 
+   
+        void Cascaritas()
+        {
+            // Set the boolean to true
+            animator.SetBool("isCascaritas", true);
+
+            // Start a coroutine to set it back to false after 3 seconds
+            StartCoroutine(SetCascaritasFalseAfterDelay(3f));
+        }       
+
+    
+
+    IEnumerator SetCascaritasFalseAfterDelay(float delay)
+    {
+        // Wait for the specified delay in seconds
+        yield return new WaitForSeconds(delay);
+
+        // Set the boolean back to false
+        animator.SetBool("isCascaritas", false);
+    }
 
     void FireBullet()
     {
