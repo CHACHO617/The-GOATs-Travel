@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 765985690}
   - component: {fileID: 765985689}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Backround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1045,7 +1045,7 @@ GameObject:
   - component: {fileID: 1266280966}
   - component: {fileID: 1266280965}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Starat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1177,7 +1177,7 @@ GameObject:
   - component: {fileID: 1370229462}
   - component: {fileID: 1370229461}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1535,7 +1535,7 @@ GameObject:
   - component: {fileID: 1965962090}
   - component: {fileID: 1965962089}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: HowToPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
