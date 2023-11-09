@@ -31,8 +31,7 @@ public class BallController1 : MonoBehaviour
 
     }
 
-
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemigo"))
         {
@@ -40,6 +39,5 @@ public class BallController1 : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("Colisiono1");
         }
-
     }
 }
