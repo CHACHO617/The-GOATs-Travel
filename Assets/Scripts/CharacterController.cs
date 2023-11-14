@@ -19,6 +19,9 @@ public class CharacterController : MonoBehaviour
     public GameObject ball1;
     public Transform cannonTransform;
 
+    private int ballsMaxL = 15;
+    private int ballsMaxR = 15;
+
 
 
     private void Start()
@@ -34,14 +37,32 @@ public class CharacterController : MonoBehaviour
     {
         ProcesarMovimiento();
         ProcesarSalto();
-
+        
         if (Input.GetKeyDown(KeyCode.K))
         {
-            FireBullet();
+            if (ballsMaxR > 0)
+            {
+                FireBullet();
+                ballsMaxR--;
+            }
+            else
+            {
+                Debug.Log("No more balls");
+            }
+            
         }
         else if (Input.GetKeyDown(KeyCode.J))
         {
-            FireBulletL();
+            if (ballsMaxL > 0)
+            {
+                FireBulletL();
+                ballsMaxL--;
+            }
+            else
+            {
+                Debug.Log("No more balls");
+            }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.G))
@@ -76,12 +97,15 @@ public class CharacterController : MonoBehaviour
         animator.SetBool("isCascaritas", false);
     }
 
+
+
+
+
     void FireBullet()
     {
         if (ball != null && cannonTransform != null)
         {
             GameObject bullet = Instantiate(ball, cannonTransform.position, cannonTransform.rotation);
-            
         }
     }
     void FireBulletL()
@@ -89,8 +113,10 @@ public class CharacterController : MonoBehaviour
         if (ball != null && cannonTransform != null)
         {
             GameObject bullet = Instantiate(ball1, cannonTransform.position, cannonTransform.rotation);
-
+    
         }
+        
+
     }
 
 
