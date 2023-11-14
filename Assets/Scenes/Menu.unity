@@ -1116,7 +1116,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1771024059}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: IrAJuego
+        m_MethodName: IrALevel1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

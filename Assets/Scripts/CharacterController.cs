@@ -20,7 +20,11 @@ public class CharacterController : MonoBehaviour
     public Transform cannonTransform;
 
     private int ballsMaxL = 15;
+    public int BallsMaxL {  get { return ballsMaxL; } }
+
+
     private int ballsMaxR = 15;
+    public int BallsMaxR { get { return ballsMaxR; } }
 
 
 
