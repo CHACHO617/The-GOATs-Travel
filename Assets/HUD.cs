@@ -18,6 +18,6 @@ public class HUD : MonoBehaviour
     {
         RightBallText.text = characterController.BallsMaxR.ToString();
         LeftBallText.text = characterController.BallsMaxL.ToString();
-        GoldenText.text = "3/3";
+        GoldenText.text = GameManager1.PuntosTotales.ToString() + "/3";
     }
 }
