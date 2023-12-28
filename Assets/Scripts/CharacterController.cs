@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
@@ -19,6 +20,8 @@ public class CharacterController : MonoBehaviour
     public GameObject ball1;
     public Transform cannonTransform;
 
+    public AudioSource audiosource; 
+    
     private int ballsMaxL = 15;
     public int BallsMaxL {  get { return ballsMaxL; } }
 
@@ -33,7 +36,8 @@ public class CharacterController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         saltosrestantes = saltosMaximos;
-        animator = GetComponent<Animator>();    
+        animator = GetComponent<Animator>(); 
+        audiosource = GetComponent<AudioSource>();
 
     }
     // Update is called once per frame
@@ -179,4 +183,7 @@ public class CharacterController : MonoBehaviour
             transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
         }
     }
+
+    
+
 }

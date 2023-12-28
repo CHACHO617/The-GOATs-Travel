@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6286095691576717974}
   m_Layer: 7
   m_Name: Ball 1
-  m_TagString: Untagged
+  m_TagString: GoodBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1f9e72ed434c212418043bf900f20942, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

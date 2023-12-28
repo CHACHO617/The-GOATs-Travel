@@ -9,6 +9,7 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI RightBallText;
     public TextMeshProUGUI LeftBallText;
     public TextMeshProUGUI GoldenText;
+    public TextMeshProUGUI HealthText;
 
     public GameManager1 GameManager1;
 
@@ -18,6 +19,7 @@ public class HUD : MonoBehaviour
     {
         RightBallText.text = characterController.BallsMaxR.ToString();
         LeftBallText.text = characterController.BallsMaxL.ToString();
-        GoldenText.text = GameManager1.PuntosTotales.ToString() + "/3";
+        GoldenText.text = GameManager1.PuntosTotales.ToString() + "/4";
+        HealthText.text = GameManager1.TotalHealth.ToString();
     }
 }

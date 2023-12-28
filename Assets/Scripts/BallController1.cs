@@ -40,4 +40,7 @@ public class BallController1 : MonoBehaviour
             Debug.Log("Colisiono1");
         }
     }
+
+
+
 }
