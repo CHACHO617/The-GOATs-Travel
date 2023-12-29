@@ -40,7 +40,7 @@ public class FlagScript : MonoBehaviour
 
     void ChangeScene1()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Intro2");
     }
 
 }

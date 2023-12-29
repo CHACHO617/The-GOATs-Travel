@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class HUD : MonoBehaviour
+public class HUD2 : MonoBehaviour
 {
-    public CharacterController characterController;
+    public CharacterController2 characterController;
     public TextMeshProUGUI RightBallText;
     public TextMeshProUGUI LeftBallText;
     public TextMeshProUGUI GoldenText;

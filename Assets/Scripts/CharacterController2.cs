@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class CharacterController2 : MonoBehaviour
 {
     public float velocidad;
     private Rigidbody2D rigidBody;
@@ -92,7 +92,7 @@ public class CharacterController : MonoBehaviour
     public void Cascaritas()
     {
         // Set the boolean to true
-        animator.SetBool("isCascaritas", true);
+        animator.SetBool("isCascaritas1", true);
 
         // Start a coroutine to set it back to false after 3 seconds
         StartCoroutine(SetCascaritasFalseAfterDelay(3f));
@@ -106,7 +106,7 @@ public class CharacterController : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Set the boolean back to false
-        animator.SetBool("isCascaritas", false);
+        animator.SetBool("isCascaritas1", false);
     }
 
 
@@ -164,11 +164,11 @@ public class CharacterController : MonoBehaviour
 
         if (inputMovimiento != 0f)
         {
-            animator.SetBool("isRunning", true);
+            animator.SetBool("isRunning1", true);
         }
         else
         {
-            animator.SetBool("isRunning", false);
+            animator.SetBool("isRunning1", false);
 
         }
 
