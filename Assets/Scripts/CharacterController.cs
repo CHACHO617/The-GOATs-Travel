@@ -20,8 +20,10 @@ public class CharacterController : MonoBehaviour
     public GameObject ball1;
     public Transform cannonTransform;
 
-    public AudioSource audiosource; 
-    
+    public AudioSource audiosource;
+    public GameManager1 GameManager1;
+
+
     private int ballsMaxL = 15;
     public int BallsMaxL {  get { return ballsMaxL; } }
 
@@ -38,6 +40,8 @@ public class CharacterController : MonoBehaviour
         saltosrestantes = saltosMaximos;
         animator = GetComponent<Animator>(); 
         audiosource = GetComponent<AudioSource>();
+        GameManager1 = GameObject.FindObjectOfType<GameManager1>();
+
 
     }
     // Update is called once per frame
@@ -85,7 +89,7 @@ public class CharacterController : MonoBehaviour
     }
 
    
-        void Cascaritas()
+        public void Cascaritas()
         {
             // Set the boolean to true
             animator.SetBool("isCascaritas", true);
@@ -184,6 +188,13 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Flag") && GameManager1.PuntosTotales == 4)
+        {
+            Cascaritas();
+        }
+    }
 
 }

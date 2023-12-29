@@ -40,7 +40,7 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             //Destroy(collision.gameObject);
-            GameManager1.TotalHealth -= 50;
+            GameManager1.TotalHealth -= 10;
             Destroy(gameObject);
             Instantiate(explosion1, transform.position, Quaternion.identity);
             Debug.Log("Colisiono Con Jugador");

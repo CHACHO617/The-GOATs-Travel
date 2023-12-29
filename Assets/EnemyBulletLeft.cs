@@ -10,12 +10,16 @@ public class EnemyBulletLeft : MonoBehaviour
 
     public GameObject explosion1;
 
+    public GameManager1 GameManager1;
+
 
 
     // Start is called before the first frame update
     private void Start()
     {
         initialPosition = transform.position;
+        GameManager1 = GameObject.FindObjectOfType<GameManager1>();
+
     }
 
     // Update is called once per frame
@@ -38,9 +42,11 @@ public class EnemyBulletLeft : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             //Destroy(collision.gameObject);
+            GameManager1.TotalHealth -= 10;
             Destroy(gameObject);
             Instantiate(explosion1, transform.position, Quaternion.identity);
             Debug.Log("Colisiono Con Jugador");
+            //SceneManager.LoadScene("Menu");
         }
     }
 }
