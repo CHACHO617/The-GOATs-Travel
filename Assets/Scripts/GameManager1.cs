@@ -25,7 +25,7 @@ public class GameManager1 : MonoBehaviour
         if (totalHealth == 0)
         {
             Debug.Log("Dead");
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("GameOver");
         }
 
     }
